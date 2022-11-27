@@ -6,19 +6,19 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const listEl = document.querySelector("#ingredients");
+const listEl = document.querySelector("#ingredients")
 
 const makeIngredientsOptions = options => {
-  return options.map((option) => {
-    const ingredientItemEl = document.createElement("li");
-    ingredientItemEl.textContent = option;
-    ingredientItemEl.classList.add("item");
+  return options.map(option => {
+    const ingredientItemEl = document.createElement("li")
+    ingredientItemEl.textContent = option
+    ingredientItemEl.classList.add("item")
 
-    return ingredientItemEl;
-  });
+    return ingredientItemEl
+  })
 }
 
-const elements = makeIngredientsOptions(ingredients);
-listEl.append(...elements);
-console.log(listEl);
+const elements = makeIngredientsOptions(ingredients)
+listEl.append(...elements)
+console.log(listEl)
 

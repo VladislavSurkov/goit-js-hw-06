@@ -16,8 +16,9 @@ const images = [
 const galleryEl = document.querySelector(".gallery");
 
 const makeImages = (options) => options
-.map((option) =>`<li><img src= ${option.url} alt= ${option.alt} width= 300></li>`)
-.join("");
+    .map(option =>
+        `<li><img src= ${option.url} alt= ${option.alt} width= 300></li>`)
+    .join("")
 
 galleryEl.insertAdjacentHTML("beforeend", makeImages(images));
 console.log(galleryEl);
