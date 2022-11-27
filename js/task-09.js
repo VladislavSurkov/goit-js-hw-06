@@ -13,4 +13,4 @@ function getRandomHexColor() {
   return ColorRandom;
 }
 
-console.log(getRandomHexColor());
+

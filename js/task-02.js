@@ -20,5 +20,5 @@ const makeIngredientsOptions = options => {
 
 const elements = makeIngredientsOptions(ingredients)
 listEl.append(...elements)
-console.log(listEl)
+
 

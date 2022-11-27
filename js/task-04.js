@@ -37,4 +37,3 @@ class Counter {
 
 const counterValue = new Counter(0);
 counterValue.eventListener();
-console.log(counterValue);

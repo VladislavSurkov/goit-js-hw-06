@@ -21,4 +21,4 @@ const makeImages = (options) => options
     .join("")
 
 galleryEl.insertAdjacentHTML("beforeend", makeImages(images));
-console.log(galleryEl);
+

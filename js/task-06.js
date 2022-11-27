@@ -9,9 +9,6 @@ const onInputBlur = (event) => {
     event.currentTarget.classList.add("invalid")
     event.currentTarget.classList.remove("valid")
   }
-
-  console.log("symbols", event.currentTarget.value.length);
-  console.log(num);
 };
 
 inputEl.addEventListener("blur", onInputBlur);
