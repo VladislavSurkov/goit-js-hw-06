@@ -1,5 +1,48 @@
+const ref = {
+  input: document.querySelector('[type="number"]'),
+  btnCreate: document.querySelector("[data-create]"),
+  btnDestroy: document.querySelector("[data-destroy]"),
+  boxes: document.querySelector("#boxes"),
+};
 
+let boxSize = 20;
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+
+function createBox() {
+  return document.createElement("div");
+}
+
+function onChangeInputValue() {
+  const amount = ref.input.value;
+  createBoxes(amount);
+}
+
+function createBoxes(amount) {
+  const boxesArr = [];
+
+  for (let i = 0; i < amount; i++) {
+    const newBox = createBox();
+    boxSize += 10;
+
+    newBox.style.width = `${boxSize}px`;
+    newBox.style.height = `${boxSize}px`;
+    newBox.style.backgroundColor = getRandomHexColor();
+
+    boxesArr.push(newBox);
+  }
+  
+  ref.boxes.append(...boxesArr);
+  boxSize = ref.boxes.lastChild.clientWidth;
+}
+
+function destroyBoxes() {
+  ref.boxes.innerHTML = "";
+  ref.input.value = 1;
+  boxSize = 20;
+}
+
+ref.btnCreate.addEventListener("click", onChangeInputValue);
+ref.btnDestroy.addEventListener("click", destroyBoxes);
