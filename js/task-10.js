@@ -17,6 +17,7 @@ function createBox() {
 
 function onChangeInputValue() {
   const amount = ref.input.value;
+  ref.input.value = "";
   createBoxes(amount);
 }
 
@@ -30,17 +31,17 @@ function createBoxes(amount) {
     newBox.style.width = `${boxSize}px`;
     newBox.style.height = `${boxSize}px`;
     newBox.style.backgroundColor = getRandomHexColor();
+    newBox.style.border = "1px solid";
 
     boxesArr.push(newBox);
   }
-  
+
   ref.boxes.append(...boxesArr);
   boxSize = ref.boxes.lastChild.clientWidth;
 }
 
 function destroyBoxes() {
   ref.boxes.innerHTML = "";
-  ref.input.value = 1;
   boxSize = 20;
 }
 
