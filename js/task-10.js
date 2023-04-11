@@ -13,7 +13,7 @@ function getRandomHexColor() {
 
 function onChangeInputValue() {
   const amount = ref.input.value;
-  // ref.input.value = "";
+  ref.input.value = "";
   createBoxes(amount);
 }
 
