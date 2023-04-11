@@ -23,7 +23,7 @@ function createBoxes(amount) {
   for (let i = 0; i < amount; i++) {
     const newBox = document.createElement("div");
     boxSize += 10;
-    console.log(boxSize);
+
     newBox.style.width = `${boxSize}px`;
     newBox.style.height = `${boxSize}px`;
     newBox.style.backgroundColor = getRandomHexColor();
